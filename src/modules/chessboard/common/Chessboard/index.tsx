@@ -44,7 +44,7 @@ export default function Chessboard({ chessboard, className, ...rest }: Props) {
   }, [boardState])
 
   return (
-    <motion.main className={`chessboard ${className}`} {...rest}>
+    <motion.div className={`chessboard ${className}`} {...rest}>
       {Array.from({ length: 8 }, (_, y) => (
         <div className='chessboard__row' key={y}>
           {Array.from({ length: 8 }, (_, x) => (
@@ -102,6 +102,6 @@ export default function Chessboard({ chessboard, className, ...rest }: Props) {
           )}
         </div>
       }
-    </motion.main>
+    </motion.div>
   )
 }
